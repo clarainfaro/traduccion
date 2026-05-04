@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>correveidile — el placer de las pequeñas cosas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<!--barra header, arreglar iconos más calidad, arreglar apartado tienda, etiquetas 03 y 07-->
+
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-label" id="cursor-label"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <a href="#hero" class="header__brand">correveidile</a>
+    <nav class="header__nav">
+      <a href="#concepto" data-section="concepto"><span class="num">01</span><span>Concepto</span></a>
+      <a href="#origen" data-section="origen"><span class="num">02</span><span>Origen</span></a>
+      <a href="#personajes" data-section="personajes"><span class="num">03</span><span>protagonistas</span></a>
+      <a href="#packaging" data-section="packaging"><span class="num">04</span><span>Packaging</span></a>
+      <a href="#tienda" data-section="tienda"><span class="num">05</span><span>Tienda</span></a>
+      <a href="#puntos" data-section="puntos"><span class="num">06</span><span>Puntos</span></a>
+      <a href="#manifiesto" data-section="manifiesto"><span class="num">07</span><span>Manifiesto</span></a>
+      <a href="#info" data-section="info"><span class="num">08</span><span>Info</span></a>
+    </nav>
+    <a href="#cotilleo" class="header__cta" data-cursor="únete">hablemos</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__top">
+      <span>pastelería artesana</span>
+      <span>bienvenido a la comunidad</span>
+    </div>
+
+    <h1 class="hero__title" id="heroTitle">correveidile</h1>
+
+    <div class="hero__deco" id="heroIcons">
+      <span class="icon icon-daniel" style="color:var(--orange);animation-delay:.4s"></span>
+      <span class="icon icon-carlos" style="color:var(--purple);animation-delay:.5s"></span>
+      <span class="icon icon-marta" style="color:var(--teal);animation-delay:.6s"></span>
+      <span class="icon icon-mariano" style="color:var(--yellow);animation-delay:.7s"></span>
+      <span class="icon icon-concha" style="color:var(--skyblue);animation-delay:.8s"></span>
+      <span class="icon icon-ana" style="color:var(--red);animation-delay:.9s"></span>
+      <span class="icon icon-maribel" style="color:var(--pink);animation-delay:1s"></span>
+      <span class="icon icon-antonio" style="color:var(--orange);animation-delay:1.1s"></span>
+      <span class="icon icon-juanluis" style="color:var(--skyblue);animation-delay:1.2s"></span>
+      <span class="icon icon-maria" style="color:var(--teal);animation-delay:1.3s"></span>
+      <span class="icon icon-leonor" style="color:var(--yellow);animation-delay:1.4s"></span>
+    </div>
+
+    <div class="hero__bottom">
+      <p class="hero__tag">El placer de las pequeñas cosas, <em
+          style="font-style:normal;font-family:'Bricolage Grotesque';font-weight:600">de toda la vida.</em></p>
+      <a href="#concepto" class="hero__scroll">Asómate</a>
+    </div>
+  </section>
+
+  <!-- TOP MARQUEE -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Pasteles artesanales</span><span>De toda España</span><span>Trece personajes</span><span>Una
+        comunidad</span><span>El sabor de siempre</span><span>Recetas heredadas</span>
+      <span>Pasteles artesanales</span><span>De toda España</span><span>Trece personajes</span><span>Una
+        comunidad</span><span>El sabor de siempre</span><span>Recetas heredadas</span>
+    </div>
+  </div>
+
+  <!-- 01 — CONCEPTO -->
+  <section class="concept" id="concepto">
+    <div class="section-num">01 — Concepto</div>
+
+    <div class="concept__floaters" aria-hidden="true">
+      <span class="icon icon-maribel"></span>
+      <span class="icon icon-daniel"></span>
+      <span class="icon icon-carlos"></span>
+      <span class="icon icon-marta"></span>
+    </div>
+
+    <div class="concept__grid">
+      <h2 class="concept__lead reveal">
+        Una marca de los pasteles <em>que cuentna</em> historias.
+      </h2>
+      <div class="concept__body reveal delay-2">
+        <p><strong>Correveidile</strong> nace de una palabra muy nuestra: la que se dice del que va de boca en boca
+          llevando recados, secretos y noticias. La que tiene tantas ganas de contarte algo, que no puede esperar.</p>
+        <p>Así son nuestros dulces. <strong>Trece personajes</strong> que se conocen entre sí, cada uno con su historia.
+          Cuando abres una caja, no abres pasteles: abres una pequeña comunidad que tiene mucho que contarte.</p>
+        <p style="opacity:.7;margin-top:1.6rem;font-size:.85rem;letter-spacing:.04em">Porque el placer auténtico vive en
+          lo cotidiano.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-line"></div>
+
+  <!-- 02 — ORIGEN -->
+  <section class="origen" id="origen">
+    <div class="section-num">02 — Origen</div>
+
+    <div class="origen__intro">
+      <h2 class="origen__lead reveal">
+        Siete jóvenes pasteleras. Siete ciudades. <span class="accent">Una sola historia</span>.
+      </h2>
+      <div class="origen__story reveal delay-2">
+        <p>Se conocieron en la Escuela de Pastelería del Gremio de Barcelona. Vienen de Alicante, Bilbao, Córdoba,
+          Gijón, Tarragona, Tenerife y Toledo. Se graduaron con notas excelentes, encontraron empleo, y la crisis las
+          dejó sin él.</p>
+        <p>Desde sus casas, empezaron a compartir por internet las recetas de los dulces típicos de sus regiones. En
+          semanas reunieron cientos. Llegó un blog. Llegaron las visitas. Y un día, las cocinas no daban abasto.</p>
+        <p style="opacity:.6;font-size:.85rem;margin-top:1.5rem">— y así nació correveidile.</p>
+      </div>
+    </div>
+
+    <div class="cities">
+      <div class="city" style="color:var(--orange)"><span class="city__num">01</span><span
+          class="city__name">Alicante</span><span class="city__pastry">Turrón de Jijona</span><span
+          class="city__icon"><span class="icon icon-daniel" style="color:var(--orange)"></span></span></div>
+      <div class="city" style="color:var(--purple)"><span class="city__num">02</span><span
+          class="city__name">Bilbao</span><span class="city__pastry">Pastel de arroz · Pastel vasco</span><span
+          class="city__icon"><span class="icon icon-carlos" style="color:var(--purple)"></span></span></div>
+      <div class="city" style="color:var(--teal)"><span class="city__num">03</span><span
+          class="city__name">Córdoba</span><span class="city__pastry">Pastel cordobés</span><span
+          class="city__icon"><span class="icon icon-marta" style="color:var(--teal)"></span></span></div>
+      <div class="city" style="color:var(--yellow)"><span class="city__num">04</span><span
+          class="city__name">Gijón</span><span class="city__pastry">Carbayón</span><span class="city__icon"><span
+            class="icon icon-mariano" style="color:var(--yellow)"></span></span></div>
+      <div class="city" style="color:var(--skyblue)"><span class="city__num">05</span><span
+          class="city__name">Tarragona</span><span class="city__pastry">Menjar Blanc · Coca dulce</span><span
+          class="city__icon"><span class="icon icon-concha" style="color:var(--skyblue)"></span></span></div>
+      <div class="city" style="color:var(--red)"><span class="city__num">06</span><span
+          class="city__name">Tenerife</span><span class="city__pastry">Trucha de Batata · Pella de gofio</span><span
+          class="city__icon"><span class="icon icon-ana" style="color:var(--red)"></span></span></div>
+      <div class="city" style="color:var(--pink)"><span class="city__num">07</span><span
+          class="city__name">Toledo</span><span class="city__pastry">Mazapán · Pastel de Gloria</span><span
+          class="city__icon"><span class="icon icon-maribel" style="color:var(--pink)"></span></span></div>
+    </div>
+  </section>
+
+  <!-- DARK MARQUEE -->
+  <div class="marquee marquee--dark">
+    <div class="marquee__track">
+      <span>Daniel</span><span>Carlos</span><span>Marta</span><span>Mariano</span><span>Concha</span><span>Ana</span><span>Maribel</span><span>Antonio</span><span>Sofía</span><span>María</span><span>Leonor</span><span>Juan
+        Luis</span><span>Eloy</span>
+      <span>Daniel</span><span>Carlos</span><span>Marta</span><span>Mariano</span><span>Concha</span><span>Ana</span><span>Maribel</span><span>Antonio</span><span>Sofía</span><span>María</span><span>Leonor</span><span>Juan
+        Luis</span><span>Eloy</span>
+    </div>
+  </div>
+
+  <!-- 03 — PERSONAJES -->
+  <section class="personajes" id="personajes">
+    <div class="personajes__head">
+      <div class="section-num" style="position:static;margin-bottom:2rem">03 — Nuestros protagonistas</div>
+      <h2 class="personajes__title reveal">
+        <span class="num">13</span> personajes.<span class="num">13</span> dulces. <em
+          style="font-family:'Instrument Serif';font-style:italic">Una</em> comunidad.
+      </h2>
+      <p class="personajes__sub reveal delay-2">
+        Cada caja que sale de nuestros hornos viene con la historia de los personajes que la habitan. Pasa el ratón por
+        encima — asómate a sus vidas.
+      </p>
+    </div>
+
+    <div class="persona-grid" id="personaGrid">
+      <!-- Will be populated by JS to keep template DRY -->
+    </div>
+  </section>
+
+  <!-- 04 — PACKAGING -->
+  <section class="packaging" id="packaging">
+    <div class="section-num">04 — Packaging</div>
+
+    <div class="packaging__head">
+      <h2 class="packaging__title reveal">
+        No es la caja es <em>la comunidad</em> que vive dentro.
+      </h2>
+      <p class="packaging__sub reveal delay-2">
+        El packaging no es envoltorio — es el escenario donde nuestros personajes te cuentan su historia. Eliges los
+        pasteles, y su envoltorio te contará quiénes son y de dónde vienen.
+      </p>
+    </div>
+
+    <figure class="packaging__hero reveal">
+      <img src="/imagenes/bolsa.jpg"
+        alt="Bolsa correveidile sobre fondo neutro con el logotipo y la línea de iconos de la marca." loading="lazy" />
+      <figcaption>
+        <span>Bolsa correveidile · papel reciclado</span>
+        <span>Disponible en todos los puntos de venta</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- 05 — TIENDA -->
+  <section class="tienda" id="tienda">
+    <div class="section-num">05 — Tienda</div>
+
+    <div class="tienda__head">
+      <h2 class="tienda__title reveal">
+        Llévate la <em>comunidad</em> a casa.
+      </h2>
+      <p class="tienda__sub reveal delay-2">
+        Eliges quién te acompaña, y nosotros nos encargamos del resto. Cada caja sale del horno, viaja en menos de 24
+        horas, y te llega con su historia debajo del brazo.
+      </p>
+    </div>
+
+    <div class="products">
+      <article class="product" style="--c:var(--pink)">
+        <div class="product__visual" style="background:var(--pink)">
+          <span class="product__badge">No. 01</span>
+          <div class="product__icons">
+            <span class="icon icon-daniel"></span>
+            <span class="icon icon-marta"></span>
+            <span class="icon icon-mariano"></span>
+            <span class="icon icon-concha"></span>
+          </div>
+        </div>
+        <div class="product__body">
+          <h3 class="product__name">Caja Pequeña</h3>
+          <p class="product__desc">"Cuatro personajes a tu elección. Para empezar a cotillear sin hacer demasiado
+            ruido."</p>
+          <div class="product__foot">
+            <span class="product__price">18€</span>
+            <a href="#" class="product__btn" data-cursor="elegir">Elegir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product featured" style="--c:var(--orange)">
+        <div class="product__visual" style="background:var(--orange)">
+          <span class="product__badge product__badge--solid">Más popular</span>
+          <div class="product__icons">
+            <span class="icon icon-daniel"></span>
+            <span class="icon icon-carlos"></span>
+            <span class="icon icon-marta"></span>
+            <span class="icon icon-mariano"></span>
+            <span class="icon icon-concha"></span>
+            <span class="icon icon-ana"></span>
+            <span class="icon icon-maribel"></span>
+            <span class="icon icon-antonio"></span>
+            <span class="icon icon-leonor"></span>
+          </div>
+        </div>
+        <div class="product__body">
+          <h3 class="product__name">Caja Comunidad</h3>
+          <p class="product__desc">"Los trece personajes, juntos. Edición completa para los que no se conforman con
+            cotillear a medias."</p>
+          <div class="product__foot">
+            <span class="product__price">48€</span>
+            <a href="#" class="product__btn" data-cursor="pedir">Pedir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product" style="--c:var(--teal)">
+        <div class="product__visual" style="background:var(--teal)">
+          <span class="product__badge">Suscripción</span>
+          <div class="product__icons">
+            <span class="icon icon-juanluis"></span>
+            <span class="icon icon-leonor"></span>
+            <span class="icon icon-maria"></span>
+            <span class="icon icon-antonio"></span>
+          </div>
+        </div>
+        <div class="product__body">
+          <h3 class="product__name">Caja del Mes</h3>
+          <p class="product__desc">"Una caja sorpresa cada mes con un personaje protagonista. Te asomas, descubres, y le
+            coges cariño."</p>
+          <div class="product__foot">
+            <span class="product__price">28€<small>/mes</small></span>
+            <a href="#" class="product__btn" data-cursor="suscribirme">Suscribirme</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 06 — PUNTOS DE VENTA -->
+  <section class="puntos" id="puntos">
+    <div class="section-num">06 — Puntos de Venta</div>
+
+    <div class="puntos__head">
+      <h2 class="puntos__title reveal">
+        El cotilleo es mejor <em>cara a cara.</em>
+      </h2>
+      <p class="puntos__sub reveal delay-2">
+        También nos encontrarás en mercados y obradores de toda España, donde nuestros personajes esperan a que pases a
+        saludar. Llegando hasta donde tu paladar te lleve.
+      </p>
+    </div>
+
+    <div class="pdv">
+      <div class="pdv__row" style="--c:var(--orange)">
+        <span class="pdv__num">01</span>
+        <span class="pdv__city">Madrid</span>
+        <span class="pdv__shop">Mercado de San Miguel · Stand 12</span>
+        <span class="pdv__addr">Plaza San Miguel, s/n</span>
+        <span class="pdv__icon"><span class="icon icon-daniel" style="color:var(--orange)"></span></span>
+      </div>
+      <div class="pdv__row" style="--c:var(--purple)">
+        <span class="pdv__num">02</span>
+        <span class="pdv__city">Barcelona</span>
+        <span class="pdv__shop">Mercat de Sant Antoni · Parada 47</span>
+        <span class="pdv__addr">Comte d'Urgell, 1</span>
+        <span class="pdv__icon"><span class="icon icon-carlos" style="color:var(--purple)"></span></span>
+      </div>
+      <div class="pdv__row" style="--c:var(--teal)">
+        <span class="pdv__num">03</span>
+        <span class="pdv__city">Valencia</span>
+        <span class="pdv__shop">Mercado de Colón · Local 7</span>
+        <span class="pdv__addr">Carrer de Jorge Juan, 19</span>
+        <span class="pdv__icon"><span class="icon icon-marta" style="color:var(--teal)"></span></span>
+      </div>
+      <div class="pdv__row" style="--c:var(--yellow)">
+        <span class="pdv__num">04</span>
+        <span class="pdv__city">Bilbao</span>
+        <span class="pdv__shop">Mercado de la Ribera · Stand 9</span>
+        <span class="pdv__addr">Erribera Kalea, s/n</span>
+        <span class="pdv__icon"><span class="icon icon-mariano" style="color:var(--yellow)"></span></span>
+      </div>
+      <div class="pdv__row" style="--c:var(--skyblue)">
+        <span class="pdv__num">05</span>
+        <span class="pdv__city">Sevilla</span>
+        <span class="pdv__shop">Mercado de Triana · Puesto 23</span>
+        <span class="pdv__addr">Plaza del Altozano</span>
+        <span class="pdv__icon"><span class="icon icon-concha" style="color:var(--skyblue)"></span></span>
+      </div>
+      <div class="pdv__row" style="--c:var(--red)">
+        <span class="pdv__num">06</span>
+        <span class="pdv__city">Málaga</span>
+        <span class="pdv__shop">Mercado de Atarazanas · Puesto 31</span>
+        <span class="pdv__addr">Calle Atarazanas, 10</span>
+        <span class="pdv__icon"><span class="icon icon-ana" style="color:var(--red)"></span></span>
+      </div>
+      <div class="pdv__row" style="--c:var(--pink)">
+        <span class="pdv__num">07</span>
+        <span class="pdv__city">San Sebastián</span>
+        <span class="pdv__shop">Mercado de la Bretxa · Stand 5</span>
+        <span class="pdv__addr">Aldamar Kalea, 9</span>
+        <span class="pdv__icon"><span class="icon icon-maribel" style="color:var(--pink)"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 — MANIFIESTO -->
+  <section class="manifiesto" id="manifiesto">
+    <div class="section-num">07 — Nuestra filosofía</div>
+
+    <div class="manifiesto__list">
+      <div class="manifiesto__item" style="--c:var(--orange)">
+        <span class="index">01</span>
+        <span class="icon icon-daniel"></span>
+        <span class="txt">Lo <em>auténtico</em></span>
+      </div>
+      <div class="manifiesto__item" style="--c:var(--pink)">
+        <span class="index">02</span>
+        <span class="icon icon-maribel"></span>
+        <span class="txt">Lo <em>artesano</em></span>
+      </div>
+      <div class="manifiesto__item" style="--c:var(--teal)">
+        <span class="index">03</span>
+        <span class="icon icon-marta"></span>
+        <span class="txt">Lo <em>natural</em></span>
+      </div>
+      <div class="manifiesto__item" style="--c:var(--yellow)">
+        <span class="index">04</span>
+        <span class="icon icon-mariano"></span>
+        <span class="txt">Lo <em>esencial</em></span>
+      </div>
+      <div class="manifiesto__item" style="--c:var(--skyblue)">
+        <span class="index">05</span>
+        <span class="icon icon-concha"></span>
+        <span class="txt">El placer <em>de cada día</em></span>
+      </div>
+      <div class="manifiesto__item" style="--c:var(--red)">
+        <span class="index">06</span>
+        <span class="icon icon-ana"></span>
+        <span class="txt">El sabor <em>de siempre</em></span>
+      </div>
+      <div class="manifiesto__item" style="--c:var(--purple)">
+        <span class="index">07</span>
+        <span class="icon icon-carlos"></span>
+        <span class="txt">La comunidad <em>que comparte</em></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 — INFO / FAQ -->
+  <section class="info" id="info">
+    <div class="section-num">08 — Info</div>
+
+    <div class="info__head">
+      <h2 class="info__title reveal">
+        Cosas que <em>querrás saber</em>.
+      </h2>
+      <p class="info__sub reveal delay-2">
+        Sin letra pequeña. Si te queda alguna duda, escríbenos a <a
+          href="mailto:hola@correveidile.es">hola@correveidile.es</a> y te lo contamos en confianza.
+      </p>
+    </div>
+
+    <div class="faq">
+      <details class="faq__item">
+        <summary>¿Cómo se conservan los dulces?</summary>
+        <div class="faq__answer">Sin conservantes, así que se cuidan como antes: en sitio fresco, seco, lejos del sol
+          directo. Si ves que tu Daniel se ha puesto un poco tieso, cinco segundos en el micro y vuelve a la vida.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Tenéis opciones sin gluten o veganas?</summary>
+        <div class="faq__answer">Algunos personajes nacen sin gluten — Mariano, Concha y Sofía, por ejemplo. Las
+          opciones veganas las tenemos en proceso: nuestros pasteles tradicionales cargan mucha mantequilla y nos
+          negamos a sustituirla por margarina industrial. Estamos en ello.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Cuánto tarda en llegar mi caja?</summary>
+        <div class="faq__answer">Si pides antes de las 14h, sale ese mismo día y te llega en 24-48h por toda la
+          península. Baleares y Canarias, 48-72h. Te avisamos por correo cuando salga del horno y otra vez cuando esté
+          en tu portal.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Puedo regalar una caja?</summary>
+        <div class="faq__answer">Por supuesto. En el checkout puedes incluir una nota escrita a mano (sí, a mano de
+          verdad) y que se envíe directo al destinatario. Si quieres, te avisamos a ti cuando le llega.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Quién hace los dulces?</summary>
+        <div class="faq__answer">Las recetas las recogimos de las abuelas, los padres y los maestros pasteleros de cada
+          región. Las elaboran cinco obradores artesanos repartidos por España — todos pequeños, todos con nombre y
+          apellidos. Si quieres conocerlos, te lo contamos por mail.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Trabajáis con eventos o regalos de empresa?</summary>
+        <div class="faq__answer">Sí. Bodas, oficinas, hoteles, restaurantes — si tienes una mesa que llenar de pasteles,
+          escríbenos a hola@correveidile.es y montamos una propuesta a medida con tu logotipo en cada caja.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Y vuestra política de devoluciones?</summary>
+        <div class="faq__answer">Si algo no llega como esperabas, te devolvemos el dinero o te enviamos otra caja sin
+          preguntar. La calidad es innegociable, y la confianza también.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- BOTTOM MARQUEE -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>El placer de las pequeñas cosas</span><span>De toda la vida</span><span>De boca en
+        boca</span><span>Correveidile</span>
+      <span>El placer de las pequeñas cosas</span><span>De toda la vida</span><span>De boca en
+        boca</span><span>Correveidile</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="cotilleo">
+    <div class="cta">
+      <h2 class="cta__title reveal">
+        ¿Tú también <em>cotilleas</em>?
+      </h2>
+      <form class="cta__form reveal delay-2"
+        onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Apuntad@';this.querySelector('input').value=''">
+        <div class="cta__form-row">
+          <input type="email" placeholder="tu correo, en confianza" required />
+          <button type="submit">Apuntarme</button>
+        </div>
+        <p class="cta__form-note">Te contamos cuándo abrimos · sin spam, sólo cotilleo del bueno.</p>
+      </form>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__brand">correveidile</div>
+      <div class="footer__icons" aria-hidden="true">
+        <span class="icon icon-daniel" style="color:var(--orange)"></span>
+        <span class="icon icon-carlos" style="color:var(--purple)"></span>
+        <span class="icon icon-marta" style="color:var(--teal)"></span>
+        <span class="icon icon-mariano" style="color:var(--yellow)"></span>
+        <span class="icon icon-concha" style="color:var(--skyblue)"></span>
+        <span class="icon icon-ana" style="color:var(--red)"></span>
+        <span class="icon icon-maribel" style="color:var(--pink)"></span>
+        <span class="icon icon-antonio" style="color:var(--orange)"></span>
+        <span class="icon icon-juanluis" style="color:var(--skyblue)"></span>
+        <span class="icon icon-maria" style="color:var(--teal)"></span>
+        <span class="icon icon-leonor" style="color:var(--yellow)"></span>
+      </div>
+      <div class="footer__col">
+        <h5>Marca</h5>
+        <a href="#concepto">Concepto</a>
+        <a href="#origen">Origen</a>
+        <a href="#personajes">Nuestros protagonistas</a>
+        <a href="#manifiesto">Nuestra filosofía</a>
+      </div>
+      <div class="footer__col">
+        <h5>Tienda</h5>
+        <a href="#tienda">Cajas online</a>
+        <a href="#puntos">Puntos de venta</a>
+        <a href="#info">Envíos &amp; devoluciones</a>
+        <a href="mailto:hola@correveidile.es">Eventos &amp; B2B</a>
+      </div>
+      <div class="footer__col">
+        <h5>Cotilleo</h5>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#cotilleo">Newsletter</a>
+        <a href="mailto:hola@correveidile.es">hola@correveidile.es</a>
+      </div>
+      <div class="footer__credit">
+        Identidad visual<br>
+        Clara Infantes Rodríguez<br>
+        <span style="opacity:.6">Todas las recetas vienen de algún sitio<br>· Hecho con cariño en España</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===========================================================
+     JAVASCRIPT
+=========================================================== -->
+  <script src="script.js">
+
+  </script>
+</body>
+
+</html>
