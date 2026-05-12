@@ -1,59 +1,3 @@
-/* ----- CHARACTER DATA ----- */
-const PERSONAJES = [
-    {
-        id: 'daniel', name: 'Daniel', pastry: 'Turrón de Jijona', city: 'Alicante', color: 'var(--orange)', has: true,
-        quote: '"Dulce, blando y pegajoso. Siempre cerca del calor del hogar, necesita cariño constante para no romperse."'
-    },
-    {
-        id: 'carlos', name: 'Carlos', pastry: 'Pastel de arroz', city: 'Bilbao', color: 'var(--purple)', has: true,
-        quote: '"Versátil y equilibrado. A medio camino entre varios mundos, consigue adaptarse a cualquier situación, aunque a veces se resquebraje."'
-    },
-    {
-        id: 'marta', name: 'Marta', pastry: 'Pastel Cordobés', city: 'Córdoba', color: 'var(--teal)', has: true,
-        quote: '"Rico, caprichoso y contundente. Puede enamorar con su dulzura o empalagar si no se maneja con cuidado."'
-    },
-    {
-        id: 'mariano', name: 'Mariano', pastry: 'Carbayón', city: 'Gijón', color: 'var(--yellow)', has: true,
-        quote: '"Clásico, firme y generoso. Un dulce que guarda en su interior todo el amor amasado durante años."'
-    },
-    {
-        id: 'concha', name: 'Concha', pastry: 'Menjar Blanc', city: 'Tarragona', color: 'var(--skyblue)', has: true,
-        quote: '"Suave, reconfortante y entrañable. Siempre lista para empachar de dulzura a quien pase por su cocina."'
-    },
-    {
-        id: 'ana', name: 'Ana', pastry: 'Trucha de Batata', city: 'Tenerife', color: 'var(--red)', has: true,
-        quote: '"Modesta y tímida por fuera, pero dulce, cálida y valiosa en su interior. Un pequeño tesoro oculto."'
-    },
-    {
-        id: 'maribel', name: 'Maribel', pastry: 'Mazapán', city: 'Toledo', color: 'var(--pink)', has: true,
-        quote: '"Compacto, intenso y que no pasa desapercibido. Un solo bocado basta para saber que tiene carácter."'
-    },
-    {
-        id: 'antonio', name: 'Antonio', pastry: 'Pastel de Gloria', city: 'Toledo', color: 'var(--orange)', has: true,
-        quote: '"Delicado, noble y esforzado. Siempre buscando poner paz con un trozo de dulzura en la mano."'
-    },
-    {
-        id: 'sofia', name: 'Sofía', pastry: 'Galletas artesanales', city: 'Tenerife', color: 'var(--purple)', has: false,
-        quote: '"Irregular, crujiente, en plena transformación. A veces dulce, a veces amarga, pero siempre auténtica."'
-    },
-    {
-        id: 'maria', name: 'María', pastry: 'Coca dulce', city: 'Tarragona', color: 'var(--teal)', has: true,
-        quote: '"Rebelde, energética y llena de sorpresas. Imposible pasar desapercibida, siempre deja un rastro de alegría."'
-    },
-    {
-        id: 'leonor', name: 'Leonor', pastry: 'Bizcocho sobao', city: 'Cantabria', color: 'var(--yellow)', has: true,
-        quote: '"Ordenada, clásica y llena de dedicación. Aunque a veces se sienta hundida, siempre sostiene a los demás."'
-    },
-    {
-        id: 'juanluis', name: 'Juan Luis', pastry: 'Pella de gofio', city: 'Tenerife', color: 'var(--skyblue)', has: true,
-        quote: '"Rústico, resistente y nutritivo. Un corazón de harina que se adapta a las circunstancias de la vida."'
-    },
-    {
-        id: 'eloy', name: 'Eloy', pastry: 'Pastel vasco', city: 'Bilbao', color: 'var(--red)', has: false,
-        quote: '"Duro por fuera, pero tierno por dentro. Un alma que se protege pero nunca deja de ser dulce."'
-    },
-];
-
 /* SVG fallback paths for the 2 missing icons (Sofía + Eloy) */
 const SVG_FALLBACK = {
     sofia: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%"><g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
@@ -67,35 +11,47 @@ const SVG_FALLBACK = {
 };
 
 /* ----- BUILD PERSONAJES GRID ----- */
-const grid = document.getElementById('personaGrid');
-PERSONAJES.forEach((p, i) => {
-    const el = document.createElement('div');
-    el.className = 'persona';
-    el.style.setProperty('--c', p.color);
-    const num = String(i + 1).padStart(2, '0');
-
-    let bgIconMarkup, tileMarkup;
-    if (p.has) {
-        bgIconMarkup = `<div class="persona__icon-bg" style="-webkit-mask-image:var(--i-${p.id});mask-image:var(--i-${p.id})"></div>`;
-        tileMarkup = `<div class="persona__icon-tile" style="-webkit-mask-image:var(--i-${p.id});mask-image:var(--i-${p.id});background:${p.color}"></div>`;
-    } else {
-        bgIconMarkup = `<div class="persona__icon-bg" style="-webkit-mask:none;mask:none;display:flex;align-items:flex-end;justify-content:center;color:rgba(31,29,26,.18);background:transparent"><div style="width:75%;height:75%">${SVG_FALLBACK[p.id]}</div></div>`;
-        tileMarkup = `<div class="persona__icon-tile" style="-webkit-mask:none;mask:none;background:transparent;display:flex;align-items:center;justify-content:center;color:${p.color}">${SVG_FALLBACK[p.id]}</div>`;
+(async () => {
+    let PERSONAJES;
+    try {
+        const res = await fetch('personajes.json');
+        if (!res.ok) throw new Error(res.status);
+        PERSONAJES = await res.json();
+    } catch (err) {
+        console.error('No se pudo cargar personajes.json:', err);
+        return;
     }
 
-    el.innerHTML = `
-    ${bgIconMarkup}
-    <span class="persona__num">${num}</span>
-    ${tileMarkup}
-    <div class="persona__text">
-      <div class="persona__name">${p.name}</div>
-      <div class="persona__pastry">${p.pastry}</div>
-      <div class="persona__city">${p.city}</div>
-      <div class="persona__quote">${p.quote}</div>
-    </div>
-  `;
-    grid.appendChild(el);
-});
+    const grid = document.getElementById('personaGrid');
+    PERSONAJES.forEach((p, i) => {
+        const el = document.createElement('div');
+        el.className = 'persona';
+        el.style.setProperty('--c', p.color);
+        const num = String(i + 1).padStart(2, '0');
+
+        let bgIconMarkup, tileMarkup;
+        if (p.has) {
+            bgIconMarkup = `<div class="persona__icon-bg" style="-webkit-mask-image:var(--i-${p.id});mask-image:var(--i-${p.id})"></div>`;
+            tileMarkup = `<div class="persona__icon-tile" style="-webkit-mask-image:var(--i-${p.id});mask-image:var(--i-${p.id});background:${p.color}"></div>`;
+        } else {
+            bgIconMarkup = `<div class="persona__icon-bg" style="-webkit-mask:none;mask:none;display:flex;align-items:flex-end;justify-content:center;color:rgba(31,29,26,.18);background:transparent"><div style="width:75%;height:75%">${SVG_FALLBACK[p.id]}</div></div>`;
+            tileMarkup = `<div class="persona__icon-tile" style="-webkit-mask:none;mask:none;background:transparent;display:flex;align-items:center;justify-content:center;color:${p.color}">${SVG_FALLBACK[p.id]}</div>`;
+        }
+
+        el.innerHTML = `
+        ${bgIconMarkup}
+        <span class="persona__num">${num}</span>
+        ${tileMarkup}
+        <div class="persona__text">
+          <div class="persona__name">${p.name}</div>
+          <div class="persona__pastry">${p.pastry}</div>
+          <div class="persona__city">${p.city}</div>
+          <div class="persona__quote">${p.quote}</div>
+        </div>
+      `;
+        grid.appendChild(el);
+    });
+})();
 
 /* ----- HERO TITLE: stagger char rise ----- */
 const heroTitle = document.getElementById('heroTitle');
@@ -157,6 +113,7 @@ const spyIO = new IntersectionObserver((entries) => {
             navLinks.forEach(a => a.classList.toggle('is-active', a.dataset.section === id));
             const isDark = e.target.matches('.origen, .manifiesto');
             header.classList.toggle('is-dark', isDark);
+            document.getElementById('backToTop')?.classList.toggle('is-dark', isDark);
         }
     });
 }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
@@ -183,3 +140,12 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 /* ----- HIDE NATIVE CURSOR ON ALL CHILDREN (extra safety) ----- */
 // (Already covered via *,a,button,input cursor:none in CSS)
+
+/* ----- BACK TO TOP: mostrar al salir del hero ----- */
+const backToTop = document.getElementById('backToTop');
+if (backToTop && heroEl) {
+    const backIO = new IntersectionObserver(([e]) => {
+        backToTop.classList.toggle('is-visible', !e.isIntersecting);
+    }, { rootMargin: '-72px 0px 0px 0px', threshold: 0 });
+    backIO.observe(heroEl);
+}
