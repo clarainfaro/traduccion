@@ -138,8 +138,22 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: .15, rootMargin: '0px 0px -8% 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-/* ----- HIDE NATIVE CURSOR ON ALL CHILDREN (extra safety) ----- */
-// (Already covered via *,a,button,input cursor:none in CSS)
+/* ----- CTA FORM ----- */
+const ctaForm = document.querySelector('.cta__form');
+if (ctaForm) {
+    ctaForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const btn = this.querySelector('button[type="submit"]');
+        const emailInput = this.querySelector('input[type="email"]');
+
+        // Cambiar texto del botón
+        btn.textContent = '✓ Apuntad@';
+
+        // Limpiar solo el email, NO el nombre
+        if (emailInput) emailInput.value = '';
+    });
+}
 
 /* ----- BACK TO TOP: mostrar al salir del hero ----- */
 const backToTop = document.getElementById('backToTop');
